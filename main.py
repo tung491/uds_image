@@ -26,7 +26,7 @@ def uds(update, context):
                                         var element = arguments[0];
                                         element.parentNode.removeChild(element);
                                         """, rm_element)
-                with open('defination.png', 'wb') as f:
+                with open('definition.png', 'wb') as f:
                     f.write(def_panel.screenshot_as_png)
             context.bot.send_photo(update.effective_chat.id, photo=open('definition.png', 'rb'))
     else:
