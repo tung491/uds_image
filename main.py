@@ -33,9 +33,10 @@ def uds(update, context):
         context.bot.send_message(chat_id=update.effective_chat.id, text='There is no defination for this word')
 
 
-start_handler = CommandHandler('start', start)
-dispatcher.add_handler(start_handler)
+if __name__ == '__main__':
+    start_handler = CommandHandler('start', start)
+    dispatcher.add_handler(start_handler)
 
-uds_handler = CommandHandler('uds', uds)
-dispatcher.add_handler(uds_handler)
-updater.start_polling()
+    uds_handler = CommandHandler('uds', uds)
+    dispatcher.add_handler(uds_handler)
+    updater.start_polling()
